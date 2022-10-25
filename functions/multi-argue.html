@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dont know what to put here</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table * {
+            outline: 1px black solid;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>cart</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>product</th>
+                <th>amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>egg</td>
+                <td>1.00</td>
+            </tr>
+            <tr>
+                <td>bread</td>
+                <td>5.00</td>
+            </tr>
+            <tr>
+                <td>rock</td>
+                <td>12.00</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>amount due <output>18.00</output></p>
+    <h5>total<span id="total"></span></h5>
+    <script>
+        function calcTotal(taxRate, shipping){
+            let totalDue = amountDue + (amountDue * taxRate) + shipping;
+            console.log(totalDue);
+            document.getElementById('total').innerText = "$" + totalCost.toFixed(2);
+
+        }
+        console.log(calcTotal(0.08,10.00));
+    </script>
+</body>
+</html>

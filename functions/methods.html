@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a</title>
+</head>
+
+<body>
+    <header>
+        <h1></h1>
+    </header>
+
+    <script>
+        window.addEventListener('load', promptUserName)
+        function promptUserName() {
+            let userName = window.prompt("what is your name?", "Defualt User");
+            if (userName && !userName.trim().length == 0) {
+                console.log(`hello ${userName}`);
+            }
+            else {
+                console.log(`hello stinky`);
+            }
+        }
+        window.addEventListener('load', pokerWin)
+        function pokerWin() {
+            let joe = 100;
+            let mary = 50;
+            let linda = 150;
+            console.log(Math.max(joe, mary, linda));
+            let amount = Math.max(joe, mary, linda);
+            switch (amount) {
+                case 100:
+                    console.log('the winner is joe mama');
+                    break;
+                case 50:
+                    console.log('the winner is mary');
+                    break;
+                case 150:
+                    console.log('the winner is lindaballs');
+                    break;
+                default:
+                    console.log('no');
+            }
+        }
+    </script>
+</body>
+
+</html>
