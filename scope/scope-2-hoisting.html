@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Variable Scope: Global - Finished</title>
+    <script>
+      //1. declare a variable called userName and set the value to "Joe"
+      var userName = "Joe"; //global space = browser window.
+
+      //2. declare a function called getVariable
+      //3. inside the function declare another variable called userName set to "Kevin"
+      //4. add the onload=getVariable() to the body element
+      //4. console.log(userName)
+      function getVariable() {
+        let userName = "Kevin"; //gets hoisted with var;
+        // alert(userName);
+        console.log(userName);
+      }
+      // 5. in the devTools console log userName // Joe
+
+      // 6. write the function below and add the html input element. what name will the button return
+      function getUserName() {
+        alert(userName);
+      }
+    </script>
+  </head>
+  <!--call the getVariable() function during the onload event-->
+  <body onload="getVariable()">
+    <input type="button" onclick="getUserName()" value="Get User Name" />
+  </body>
+</html>
